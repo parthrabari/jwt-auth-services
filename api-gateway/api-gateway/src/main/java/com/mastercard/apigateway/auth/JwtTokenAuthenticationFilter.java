@@ -56,7 +56,7 @@ public class JwtTokenAuthenticationFilter extends OncePerRequestFilter {
 
         } catch (Exception e) {
             if(e instanceof ExpiredJwtException) {
-                response.getWriter().write("Your token has expired.");
+                // response.getWriter().write("Your token has expired.");
             }
             SecurityContextHolder.clearContext();
         }
